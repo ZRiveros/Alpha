@@ -1,9 +1,8 @@
 /* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
-
-/* colors scheme */ 
-:root{
+/* colors scheme */
+:root {
     --font-standard: "Nunito", sans-serif;
     --font-logo: "Comfortaa", sans-serif;
     --font-regular: 400;
@@ -12,16 +11,14 @@
     --font-bold: 700;
     --font-extrabold: 800;
     --font-black: 900;
-    
-    /* Om jag vill ha respons */
+    /* If i want respons */
     --size-tablet: 768px;
     --size-desktop: 1400px;
-
-    --white-100: #ffffff; 
-    --white-200: #f5f7fa; 
-    --white-300: #f1f3f7; 
-    --white-400: #f0f1f5; 
-
+    /* Colors */
+    --white-100: #ffffff;
+    --white-200: #f5f7fa;
+    --white-300: #f1f3f7;
+    --white-400: #f0f1f5;
     --grey-100: #E8EAED;
     --grey-200: #EBEEF2;
     --grey-300: #E3E5E8;
@@ -45,15 +42,14 @@
     --yellow: #FFD422;
     --dark-yellow: #FCBB42;
     --blue-accent: #2D99FF;
+    --blue-accent-10: rgba(45, 153, 255, 0.10);
     --blue: #2CD9D9;
     --dark-blue: #2D7DCC;
     --green: #31D482;
     --dark-green: #24B26B;
     --purple: #826AF9;
     --dark-purple: #634CD4;
-
-
-    /* Hantering av färger*/
+    /* Managment of all colors */
     --text-color: var(--dark-400);
     --headline-: var(--dark-100);
     --border-color: var(--grey-500);
@@ -62,7 +58,7 @@
     --btn-blue-text-hover-color: var(--white-100);
     --btn-blue-border-color: var(--white-100);
     --btn-blue-border-hover-color: var(--white-100);
-    --btn-blue-background-color:var(--blue-accent);
+    --btn-blue-background-color: var(--blue-accent);
     --btn-blue-background-hover-color: var(--dark-accent);
     --btn-grey-text-color: var(--dark-100);
     --btn-grey-text-hover-color: var(--dark-100);
@@ -70,25 +66,37 @@
     --btn-grey-border-hover-color: var(--grey-100);
     --btn-grey-background-color: var(--white-400);
     --btn-grey-background-hover-color: var(--grey-100);
+
     --surface-color: var(--white-100);
 
-    /* Om jag ska ha darmode/lightmode switch */
-    [data-theme="dark"] {
+    --navlink-text-color: var(--text-color); 
+    --navlink-text-hover-color: var(--blue-accent);
+    --navlink-text-active-color: var(--blue-accent);
+    --navlink-background-color: transparent;
+    --navlink-background-hover-color: var(--blue-accent-10);
+    --navlink-background-active-color: var(--blue-accent-10);
+
+
+
+
+
+
+
+/*     if i want darmode/lightmode switch 
+        [data-theme="dark"] {
         --text-color: var(--dark-400);
         --headline-: var(--dark-100);
         --border-color: var(--gray-400);
         --background-color: var(--white-200);
-    }
+    }*/
 }
-
-/* Base */
-/* Container finns redan färdigt i bootstrap, funkar inte i alla sidor men man kan specifiera */
-*,*::before, *,*::after{
+/*/* Base */
+/* Container is already available in bootstrap, doesn't work in all pages but you can specify */*, *::before, *::after {
     box-sizing: border-box;
 }
 
 
-html, body{
+html, body {
     margin: 0;
     font-size: 16px;
     font-weight: var(--font-regular);
@@ -98,110 +106,122 @@ html, body{
     background-color: var(--background-color);
 }
 /* structure */
-.center-screen{
+.center-screen {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100dvh;
 }
 
-.center-content{
+.center-content {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
 }
 
-.surface{
+.surface {
     padding: 2rem;
     border-radius: 15px;
     background-color: var(--surface-color);
     box-shadow: 0 4px 4px 3px rgba(126, 126, 126, 0.1);
 }
 
-.portal{
+.portal {
     display: grid;
     grid-template-columns: minmax(50px, 270px) 1fr;
     grid-template-rows: minmax(80px, auto) 1fr;
-    grid-template-areas: "side top" "side main";
+    grid-template-areas: "logo top" "side main";
     height: 100dvh;
+}
 
-    .side {
-        grid-area: side;
-        border-right: 1px solid var(--border-color);
-    }
-
-    .top {
-        grid-area: top;
+    .portal > .logotype{
+        grid-area: logo;
         border-right: 1px solid var(--border-color);
         padding: 1rem 2rem;
-        display: flex;
-        justify-content: space-between;
+    }
+
+    .portal .side {
+        grid-area: side;
+        border-right: 1px solid var(--border-color);
+        padding: 1rem;
+    }
+
+    .portal .top {
+        grid-area: top;
+        border-bottom: 1px solid var(--border-color);
+        padding: 1rem 2rem;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 5rem;
         align-items: center;
     }
 
-    .main {
+    .portal .main {
         grid-area: main;
         padding: 2rem;
     }
 
 
-.temp{
+.temp {
     height: 600px;
     width: 450px;
 }
 
 /* Typography */
-h1,h2,h3,h4,h5,h6{
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--font);
     margin: 0;
     padding: 0;
 }
-h1{
+
+h1 {
     font-size: 36px;
     font-weight: var(--font-bold);
 }
 
-h2{
+h2 {
     font-size: 32px;
     font-weight: var(--font-bold);
 }
 
-h3{
+h3 {
     font-size: 28px;
     font-weight: var(--font-bold);
 }
 
-h4{
+h4 {
     font-size: 24px;
     font-weight: var(--font-semibold);
 }
 
-h5{
+h5 {
     font-size: 20px;
     font-weight: var(--font-semibold);
 }
 
-h6{
+h6 {
     font-size: 18px;
     font-weight: var(--font-semibold);
 }
 /* links */
-.nav-link{
+.nav-link {
     font-family: var(--font-standard);
     font-weight: var(--font-semibold);
     font-size: 15px;
 }
 
-.tab-link{
+.tab-link {
     font-family: var(--font-standard);
     font-weight: var(--font-bold);
     font-size: 15px;
 }
 
+
+
 /* buttons */
-/* Bootstrap har färdig designade buttons men kan inte alltid matcha designen */ 
-.btn{
+/* Bootstrap has pre-designed buttons but can't always match the design */
+.btn {
     border-radius: 14px;
     font-size: 1em;
     font-weight: var(--font-regular);
@@ -214,25 +234,27 @@ h6{
 }
 
 
-.btn-blue{
-    color:var(--btn-blue-text-color);
+.btn-blue {
+    color: var(--btn-blue-text-color);
     border-color: var(--btn-blue-border-color);
     background-color: var(--btn-blue-background-color);
+}
 
-    &:hover{
+    .btn-blue:hover {
         color: var(--btn-blue-text-hover-color);
         border: var(--btn-blue-border-hover-color);
         background-color: var(--btn-blue-background-hover-color);
     }
-}
 
 
-.btn-grey{
+
+.btn-grey {
     color: var(--btn-grey-text-color);
     border-color: var(--btn-grey-border-color);
     background-color: var(--btn-grey-background-color);
+}
 
-    &:hover{
+    .btn-grey:hover {
         color: var(--btn-grey-text-hover-color);
         border-color: var(--btn-grey-border-hover-color);
         background-color: var(--btn-grey-background-hover-color);
@@ -240,7 +262,70 @@ h6{
 /* lists */
 
 /* components */
+.alpha-logotype{
+    font-size: 26px;
+    font-weight: var(--font-bold);
+    font-family: var(--font-logo);
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem   ;
+}
+
+.nav-links{
+    margin: 2rem 0;
+}
+
+
+    .nav-links > .nav-link {
+        font-size: 1em;
+        font-family: var(--font-standard);
+        font-weight: var(--font-semibold);
+        text-decoration: none;
+        color: var(--navlink-text-color);
+        background-color: var(--navlink-background-color);
+        border-radius: 1rem;
+        padding: 1rem 1.5rem;
+        margin-bottom: 10px;
+
+        display: flex;
+        align-items: center;
+        gap: 1.3rem;    
+    }
+
+    .nav-links > .nav-link:hover {
+        color: var(--navlink-text-hover-color);
+        background-color: var(--navlink-background-hover-color);
+    }
+
+
+    .nav-links > .nav-link:active {
+        color: var(--navlink-text-active-color);
+        background-color: var(--navlink-background-active-color);
+    }
+
 
 /* sections */
 
 /* view/pages */
+/*padding-left: 1rem;
+padding-right: 1rem;
+margin-left: auto;
+margin-right: auto;
+max-width: 1200px;
+
+@media (width >= 768px) {
+    max-width: 720px;
+}
+
+@media (width >= 992px) {
+    max-width: 960px;
+}
+
+@media (width >= 1400px) {
+    max-width: 1320px;
+}
+}
+*/
