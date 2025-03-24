@@ -30,16 +30,12 @@
     --grey-600: #C6C6C6;
     --grey-700: #9E9E9E;
     --grey-800: #637085;
-
-
     --dark-100: #1a1926;
     --dark-200: #1C1D1F;
     --dark-300: #202123;
     --dark-400: #28263B;
     --dark-500: #333333;
     --dark-600: #38383B;
-
-
     --accent: #2D99FF;
     --dark-accent: #2682D9;
     --orange: #FF9640;
@@ -62,22 +58,18 @@
     --headline-: var(--dark-100);
     --border-color: var(--grey-500);
     --background-color: var(--white-400);
-
     --btn-blue-text-color: var(--white-100);
     --btn-blue-text-hover-color: var(--white-100);
     --btn-blue-border-color: var(--white-100);
     --btn-blue-border-hover-color: var(--white-100);
     --btn-blue-background-color:var(--blue-accent);
     --btn-blue-background-hover-color: var(--dark-accent);
-
     --btn-grey-text-color: var(--dark-100);
     --btn-grey-text-hover-color: var(--dark-100);
     --btn-grey-border-color: var(--white-300);
     --btn-grey-border-hover-color: var(--grey-100);
     --btn-grey-background-color: var(--white-400);
     --btn-grey-background-hover-color: var(--grey-100);
-
-
     --surface-color: var(--white-100);
 
     /* Om jag ska ha darmode/lightmode switch */
@@ -152,7 +144,6 @@ html, body{
         grid-area: main;
         padding: 2rem;
     }
-}
 
 
 .temp{
@@ -165,7 +156,6 @@ h1,h2,h3,h4,h5,h6{
     font-family: var(--font);
     margin: 0;
     padding: 0;
-    
 }
 h1{
     font-size: 36px;
@@ -175,19 +165,16 @@ h1{
 h2{
     font-size: 32px;
     font-weight: var(--font-bold);
-    
 }
 
 h3{
     font-size: 28px;
     font-weight: var(--font-bold);
-    
 }
 
 h4{
     font-size: 24px;
     font-weight: var(--font-semibold);
-    
 }
 
 h5{
@@ -198,7 +185,6 @@ h5{
 h6{
     font-size: 18px;
     font-weight: var(--font-semibold);
-    
 }
 /* links */
 .nav-link{
@@ -213,8 +199,6 @@ h6{
     font-size: 15px;
 }
 
-
-
 /* buttons */
 /* Bootstrap har färdig designade buttons men kan inte alltid matcha designen */ 
 .btn{
@@ -223,7 +207,6 @@ h6{
     font-weight: var(--font-regular);
     font-family: var(--font-standard);
     padding: 0.3rem 1.5rem;
-
     display: flex;
     gap: 0.4rem;
     align-items: center;
@@ -254,7 +237,6 @@ h6{
         border-color: var(--btn-grey-border-hover-color);
         background-color: var(--btn-grey-background-hover-color);
     }
-}
 /* lists */
 
 /* components */
