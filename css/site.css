@@ -121,10 +121,14 @@ html, body {
 }
 
 .surface {
-    padding: 2rem;
+    padding: 5rem;
     border-radius: 15px;
     background-color: var(--surface-color);
     box-shadow: 0 4px 4px 3px rgba(126, 126, 126, 0.1);
+    width: 600px;
+    height: 700px;
+    justify-content: center;
+    align-items: center;
 }
 
 .portal {
@@ -305,6 +309,92 @@ h6 {
         color: var(--navlink-text-active-color);
         background-color: var(--navlink-background-active-color);
     }
+
+
+.loginform {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+}
+    input {
+        padding: 10px;
+        border: 0.5px solid #ddd;
+        border-radius: 15px;
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5rem;
+    }
+
+    label {
+    text-align: left;
+    font-size: 15px;
+    font-family: var(--font-semibold);
+    margin-bottom: 10px;
+    font-weight: var(--font-bold);
+    }
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.signup-text {
+    margin-top: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: var();
+}
+
+.signup-text a {
+    color: #3b82f6;
+    text-decoration: none;
+}
+
+.signup-text a:hover {
+    text-decoration: underline;
+}
+
+.surface h1 {
+    font-family: var(--font-bold);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+button {
+    color: var(--btn-blue-text-color);
+    border-color: var(--btn-blue-border-color);
+    background-color: var(--btn-blue-background-color);
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #2563eb;
+}
+
+
+
+
+
+
+
 
 
 /* sections */
