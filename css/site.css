@@ -126,9 +126,8 @@ html, body {
     background-color: var(--surface-color);
     box-shadow: 0 4px 4px 3px rgba(126, 126, 126, 0.1);
     width: 600px;
-    height: 700px;
-    justify-content: center;
-    align-items: center;
+    min-height: 600px;
+    max-height: 900px;
 }
 
 .portal {
@@ -310,15 +309,6 @@ h6 {
         background-color: var(--navlink-background-active-color);
     }
 
-
-.loginform {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 350px;
-}
     input {
         padding: 10px;
         border: 0.5px solid #ddd;
@@ -331,6 +321,7 @@ h6 {
         display: flex;
         flex-direction: column;
         margin-top: 5rem;
+        text-align: left;
     }
 
     label {
@@ -339,6 +330,7 @@ h6 {
     font-family: var(--font-semibold);
     margin-bottom: 10px;
     font-weight: var(--font-bold);
+    padding: 0.2rem;
     }
 
 .remember-me {
@@ -367,6 +359,33 @@ h6 {
     text-decoration: underline;
 }
 
+.checkbox-I-accept{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    margin-bottom: 15px;
+    font-family: var(--font-regular);
+    font-weight: var(--font-bold);
+}
+
+.checkbox-I-accept input{
+    margin-right: 10px;
+}
+
+.checkbox-I-accept a {
+    text-decoration: none;
+}
+
+.log-in{
+    margin-top: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: var();
+}
+
+
 .surface h1 {
     font-family: var(--font-bold);
     margin-top: 1rem;
@@ -389,6 +408,24 @@ button:hover {
     background-color: #2563eb;
 }
 
+.menu-horizontal {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+    font-size: 15px;
+    font-family: var(--font-regular);
+}
+
+.menu-horizontal span:hover{
+    color: var(--navlink-text-hover-color);
+    background-color: var(--navlink-background-hover-color);
+    text-decoration: underline;
+}
+
+.main-top{
+    display: flex;
+    justify-content:space-between
+}
 
 
 
