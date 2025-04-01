@@ -31,7 +31,10 @@
         </div>
         <div class="top">
             <div class="top-right">
-                
+                <div class="settings">
+                    <i class="fa-solid fa-gear"></i>
+                    <img src="images/profile-avatar-icon.svg" alt="">
+                </div>
             </div>
 
         </div>
@@ -48,8 +51,42 @@
                 <span>COMPLETED</span>
             </div>
         </div>
-    </div>
+        <div class="modal-overlay">
+            <div class="modal">
+                    <span class="close-btn">&times;</span>
+                <h2>Add Project</h2>
+                <div class="project-logo">
+                    <img src="images/project-logo-icon.svg" alt="">
+                </div>
+                <form>
+                    <label>Project Name</label>
+                    <input type="text" placeholder="Project Name">
+    
+                    <label>Client Name</label>
+                    <input type="text" placeholder="Client Name">
+    
+                    <label>Description</label>
+                    <textarea placeholder="Type something"></textarea>
 
+                    <div class="date-container">
+                        <div>
+                            <label>Start Date</label>
+                            <input type="date">
+                        </div>
+                        <div>
+                            <label>End Date</label>
+                            <input type="date">
+                        </div>
+                    </div>
+    
+                    <label>Budget</label>
+                    <input type="number" placeholder="$ 0">
+    
+                    <button type="submit" class="create-btn">Create</button>
+                </form>
+            </div>
+    </div>
+    <script src="script.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    
 </body>
